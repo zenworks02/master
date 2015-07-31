@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Страница регистрации</title>
+    <link href="styles/style.css" type="text/css" rel="stylesheet">
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+
+
+</head>
+<body>
+<!-- поля формы:
+
+ Имя / text
+ Фамилия  / text
+ Почта / email
+ Город / select
+пол / radio
+ пароль / password a-zA-Z0-9 8 - 16
+ повторить  пароль /password
+ телефон / text / 10 чисел
+ информация о себе / textarea 0 - 1000
+ согласие / checkbox
+ сбросить форму / reset
+ Отправить форму / submit
+
+
+ -->
+<div class="form_wrapper">
+    <form name="register_form" action="" method="post">
+
+        <div class="form_line_element">
+            <div class="form_text">Имя</div>
+            <div class="form_element"><input type="text" value="" name="firstname" class="firstname field_incorrect"></div>
+            <div class="form_element_result"></div>
+            <div class="firstname_error_text form_error_text">
+                Введите пожалуйста имя длиной от 2 до 32 символов на кириллице или латинице
+            </div>
+
+
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">Фамилия</div>
+            <div class="form_element"><input type="text" value="" name="Surname" class="Surname field_incorrect"></div>
+            <div class="form_element_result"></div>
+            <div class="Surname_error_text form_error_text">
+                Введите пожалуйста Фамилию длиной от 2 до 32 символов на кириллице или латинице
+            </div>
+
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">Электронная почта</div>
+            <div class="form_element"><input type="text" value="" name="email"></div>
+            <div class="form_element_result"></div>
+            <div class="mail_error_text form_error_text">
+                Введите пожалуйста пароль длиной от 6 до 32 символов на кириллице или латинице
+            </div>
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">Номер телефона</div>
+            <div class="form_element"><input type="tel" value="" name="phone" class="phone field_incorrect"></div>
+            <div class="form_element_result"></div>
+            <div class="phone_error_text form_error_text">
+                Введите пожалуйста номер телефона в формате +79110000000
+            </div>
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">Город</div>
+            <div class="form_element">
+                <select name="city">
+                    <option value="1">Санкт-Петербург</option>
+                    <option value="2">Москва</option>
+                </select>
+            </div>
+            <div class="form_element_result"></div>
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">Пол</div>
+            <div class="form_element">
+                <input type="radio" name="sex" value="male"> Мужской
+                <input type="radio" name="sex" value="female"> Женский
+            </div>
+            <div class="form_element_result"></div>
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">Пароль</div>
+            <div class="form_element"><input type="password" value="" name="password"></div>
+            <div class="form_element_result"></div>
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">Повторите пароль</div>
+            <div class="form_element"><input type="password" value="" name="password2"></div>
+            <div class="form_element_result"></div>
+        </div>
+
+        <div class="form_line_element">
+            <div class="form_text">О себе</div>
+            <div class="form_element"><textarea name="about_me"></textarea></div>
+            <div class="form_element_result"></div>
+        </div>
+
+        <div class="form_line_element form_center">
+
+            <input type="checkbox" value="" name="register_offer">
+            Согласны ли вы с условиями регистрации
+        </div>
+
+        <div class="form_line_element form_center">
+            <input type="submit" value="Отправить">
+            <input type="reset" value="Очистить">
+        </div>
+
+
+    </form>
+</div>
+</body>
+</html>
